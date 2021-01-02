@@ -1,32 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  height: 100vh;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App__login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: 0.5s;
 }
-
-.App-link {
+.App__login h2 {
   color: #61dafb;
 }
+.App__login form {
+  display: flex;
+  flex-direction: column;
+}
+.App__login form label {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  color: #61dafb;
+  font-size: 18px;
+}
+.App__login form input[type="text"] {
+  position: relative;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: 700;
+  outline: none;
+  color: #fff;
+}
+
+.App__login form input[type="button"] {
+  font-weight: 600;
+  max-width: 30%;
+  height: 2.5em;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: 0.5s;
+}
+.App__login form input[type="button"]:hover {
+  color: #000000;
+  background: #61dafb;
+}
+
 
 @keyframes App-logo-spin {
   from {
